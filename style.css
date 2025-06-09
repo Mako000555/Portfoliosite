@@ -1,0 +1,199 @@
+/*HEADER*/
+
+img.tema4img {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Layer_1 {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+  display: block; /* Make the image a block element */
+  margin-left: auto; /* Auto margin left */
+  margin-right: auto;
+}
+
+#forside {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background-color: rgba(198, 178, 152, 0.41); /* Light gray background */
+  padding: 2rem 3rem; /* Add some padding around the navigation */
+  font-family: "Inknut Antiqua", serif;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display items in a row */
+  gap: 2rem; /* Space between menu items */
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0; /* Remove default margins */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Dark gray text color */
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 500; /* Medium font weight */
+  padding: 0.5rem 0; /* Add some vertical padding */
+}
+
+nav a:hover {
+  color: #0077cc; /* Change color on hover */
+}
+
+/* Fix for your HTML - you're missing > after li */
+nav li > a {
+  display: block;
+}
+
+/*Body*/
+
+.dialog1 .dialog2 .dialog4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dialog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; /* Optional: space between columns */
+}
+
+body {
+  font-family: "Inknut Antiqua", serif; /* Set the body font */
+  line-height: 1.6; /* Increase line height for readability */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.tema4p {
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  display: grid; /* Use CSS Grid for layout */
+}
+
+dialog img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background-color: rgba(198, 178, 152, 0.41); /* Light gray background */
+  padding: 2rem 3rem; /* Add some padding */
+  text-align: center; /* Center the footer text */
+}
+
+.tema5 {
+  margin-top: 75px;
+}
+
+button {
+  background-color: #c6b298;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin: 1em auto;
+}
+
+button:hover,
+button:focus {
+  background-color: #b09c7a;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  .section.projekter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+  }
+
+  section.projekter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1400px; /* Wider max width */
+    margin: 0 auto; /* Center the grid */
+    width: 95vw; /* Use most of the viewport width */
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+  }
+
+  section.projekter > #tema4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 2; /* Optional: adjust order if needed */
+    grid-column: 1 / -1; /* Make it span all columns in the grid */
+  }
+
+  .ommiggrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 2rem;
+  }
+
+  #tema2:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+  }
+
+  #tema4:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+  }
+
+  #Layer_1:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+  }
+
+  #tema5:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 700px) {
+  section.projekter {
+  }
+}
