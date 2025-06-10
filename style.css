@@ -190,6 +190,13 @@ button {
     max-width: 60%;
     margin-top: -50px;
   }
+  .dotlottie-player {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 @media (max-width: 700px) {
