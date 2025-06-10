@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Tema1: Clickable image opens dialog0
+  const tema1Div = document.querySelector(".tema1");
+  const tema1Img = tema1Div ? tema1Div.querySelector("img") : null;
+  const dialog0 = document.getElementById("dialog0");
+  const closeBtn0 = document.getElementById("closeBtn0");
+
+  if (tema1Img && dialog0 && closeBtn0) {
+    tema1Img.style.cursor = "pointer";
+    tema1Img.addEventListener("click", function () {
+      dialog0.showModal();
+    });
+    closeBtn0.addEventListener("click", function () {
+      dialog0.close();
+    });
+  }
+
   // Tema2: Clickable image opens dialog1
   const tema2Div = document.querySelector(".tema2");
   const tema2Img = tema2Div ? tema2Div.querySelector("img") : null;
@@ -32,18 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const tema4Img = document.getElementById("tema4img");
-const dialog3 = document.getElementById("dialog3");
-const closeBtn3 = document.getElementById("closeBtn3");
+  const dialog3 = document.getElementById("dialog3");
+  const closeBtn3 = document.getElementById("closeBtn3");
 
-if (tema4Img && dialog3 && closeBtn3) {
-  tema4Img.style.cursor = "pointer";
-  tema4Img.addEventListener("click", function () {
-    dialog3.showModal();
-  });
-  closeBtn3.addEventListener("click", function () {
-    dialog3.close();
-  });
-}
+  if (tema4Img && dialog3 && closeBtn3) {
+    tema4Img.style.cursor = "pointer";
+    tema4Img.addEventListener("click", function () {
+      dialog3.showModal();
+    });
+    closeBtn3.addEventListener("click", function () {
+      dialog3.close();
+    });
+  }
 
   // Tema5: Clickable image opens dialog4
   const tema5Div = document.querySelector(".tema5");

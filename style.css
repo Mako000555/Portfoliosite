@@ -1,19 +1,7 @@
 /*HEADER*/
 
-img.tema4img {
-  max-width: 40%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#Layer_1 {
-  max-width: 100%;
-}
-
 img {
-  max-width: 100%; /* Ensure images are responsive */
+  max-width: 80%; /* Ensure images are responsive */
   height: auto;
   display: block; /* Make the image a block element */
   margin-left: auto; /* Auto margin left */
@@ -21,7 +9,7 @@ img {
 }
 
 #forside {
-  max-width: 45%;
+  max-width: 40%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -108,13 +96,9 @@ footer {
   text-align: center; /* Center the footer text */
 }
 
-.tema5 {
-  margin-top: 75px;
-}
-
 button {
   background-color: #c6b298;
-  color: #333;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   padding: 0.7em 1.5em;
@@ -122,42 +106,32 @@ button {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   margin: 1em auto;
 }
 
-button:hover,
-button:focus {
-  background-color: #b09c7a;
-  color: #fff;
-  transform: translateY(-2px) scale(1.04);
-  outline: none;
+.dialog-text {
+  margin-left: 25px;
+  margin-right: 150px;
 }
 
 @media (min-width: 700px) {
-  .section.projekter {
+  section.projekter-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: auto;
+    max-width: auto;
+    margin: 25px;
+    box-sizing: border-box;
   }
 
-  section.projekter {
+  /* Section for tema4 and tema5: 2 columns */
+  section.projekter-bottom {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    max-width: 1400px; /* Wider max width */
-    margin: 0 auto; /* Center the grid */
-    width: 95vw; /* Use most of the viewport width */
+    grid-template-columns: 1fr 1fr;
+    gap: auto;
+    max-width: auto;
     box-sizing: border-box;
     padding: 2rem 1rem;
-  }
-
-  section.projekter > #tema4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    order: 2; /* Optional: adjust order if needed */
-    grid-column: 1 / -1; /* Make it span all columns in the grid */
   }
 
   .ommiggrid {
@@ -166,6 +140,12 @@ button:focus {
     margin-left: 50px;
     margin-right: 50px;
     gap: 2rem;
+  }
+
+  #tema1:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
   }
 
   #tema2:hover {
@@ -191,9 +171,54 @@ button:focus {
     transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     cursor: pointer;
   }
+
+  #tema2 {
+    max-width: 90%;
+  }
+
+  .tema3 svg {
+    margin-top: -100px;
+  }
+
+  #tema4 {
+    max-width: 80%;
+    margin-left: 100px;
+    margin-top: -50px;
+  }
+
+  #tema5 {
+    max-width: 60%;
+    margin-top: -50px;
+  }
 }
 
 @media (max-width: 700px) {
   section.projekter {
+    display: block;
+  }
+
+  #tema4 {
+    margin-top: 75px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  #tema5 {
+    margin-top: 75px;
+    margin-left: 50px;
+    margin-right: 25px;
+  }
+
+  .tema1 {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  #forside {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
